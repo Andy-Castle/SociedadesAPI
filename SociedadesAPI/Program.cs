@@ -36,7 +36,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseCors(MyAllowSpecificOrigins);
 
@@ -45,4 +45,18 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+/*
+ * En la terminal
+ * 
+ * dotnet dev-certs https --clean
+ * dotnet dev-certs https --trust
+ * 
+ * cd C:\Users\maste\source\repos\SociedadesAPI\SociedadesAPI
+ * 
+ * 
+ * dotnet run --launch-profile https
+ * 
+ * ir al swagger
+ */
 
